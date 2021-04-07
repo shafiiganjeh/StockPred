@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Apr  5 00:37:20 2021
 
-@author: borz
-"""
 
 import numpy as np
 import pandas as pd
@@ -41,29 +37,11 @@ Dset = tf.data.Dataset.from_tensor_slices(TrainData[0]).batch(workingDay+1, drop
 Dset = Dset.map(split)
 Dset = Dset.batch(batchSize, drop_remainder=True)
 #
-#model = Model(256,batchSize,uniques)
-#model.summary()
+model = Model(256,batchSize,uniques)
+model.summary()
 
-
-
-
-#for input_example_batch, target_example_batch in Dset.take(1):
-#  example_batch_predictions = model(tf.reshape(input_example_batch, [4,11,1]))
-#  print(example_batch_predictions.shape)
-#  print(tf.reshape(input_example_batch, [4,11,1]))
-
-#a=0
-#for i in Dset:
-#    a=a+1
-#print(a)
-
-#lstm = tf.keras.layers.LSTM(units=4)
-#inputs = tf.random.normal([32, 10, 8])
-#print(inputs.shape)
-
-#print(TrainData[0].unique().shape)
-#print(TrainData[0])
-
-#TrainData = pd.cut(TrainData[0],bins=pd.interval_range(start=min(TrainData[0]), end= max(TrainData[0]), periods=32))
-#print(TrainData.value_counts())
-#.value_counts()
+#todo
+#loss function
+#training the model
+#adjusting parameters
+#benchmarking with random walk as baseline
