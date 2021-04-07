@@ -1,3 +1,5 @@
+#this is for creating a correlation matrix to find high correlating stocks and visualize the correlations with a bubble graph
+
 import igraph as gr
 import numpy as np
 import pandas as pd
