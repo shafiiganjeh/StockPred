@@ -1,4 +1,4 @@
-# StockPred
+# StockPred (Under construction)
 Since dealing with LSTM networks I have noticed a many examples trying to predict stock prices using a LSTM model.
 A lot of these models seem to predict perfectly (mostly due to over-fitting as a result of incorrect train-test data), 
 which gives a wrong idea about the usefulness of these models.
